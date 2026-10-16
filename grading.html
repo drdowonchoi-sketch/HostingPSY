@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How we graded · TXPsyBOT at TASP 2026</title>
+<meta name="description" content="Companion site for the TXPsyBOT poster at the TASP Fall Convention 2026: every question, every answer, and how each was graded.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%238b181a'/%3E%3Ctext x='16' y='21.5' font-family='Georgia,serif' font-size='14' font-weight='700' fill='white' text-anchor='middle'%3ETX%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Public+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="mast"><div class="in">
+  <div class="eyebrow">TASP Fall Convention 2026 · Denton, Texas · Companion site</div>
+  <h1><a href="index.html">TXPsyBOT Beta: Piloting an AI-Powered Legal and Ethical Assistant for School Psychology Practice</a></h1>
+  <p>Every question, every answer from TXPsyBOT and six free public AI tools, and exactly how each answer was graded.</p>
+</div></header>
+<nav class="topnav" aria-label="Sections"><div class="in"><a href="index.html">Overview</a><a href="questions/index.html">Questions &amp; answers</a><a href="grading.html" aria-current="page">How we graded</a><a href="sources.html">Sources</a><a href="about.html">About &amp; references</a></div></nav>
+<main>
+<div class="stack">
+  <h2>How we graded</h2>
+  <div class="grid2">
+    <div class="card"><h3>Questions and answer key</h3><p>14 legal and procedural questions from the 2025 pilot. One unclear question (“What if I don’t speak English?”) was dropped. Each has an answer key written from the governing law, reviewed and signed off by the first author, with the facts an answer must state.</p></div>
+    <div class="card"><h3>Who was asked</h3><p>October 2026: TXPsyBOT (beta) and six free public tools, ChatGPT, Gemini, Google AI Overview, Meta AI, Claude, and SAM (the Texas Regulatory Efficiency Office assistant). Each question was asked in a new chat, twice, with no follow-ups, logged out where the tool allows. The 2025 answers are the original pilot answers, regraded the same way.</p></div>
+    <div class="card"><h3>Two independent judges</h3><p>Every answer was graded by Claude Opus 5.5 and GPT-5.5, two models from different companies, without being told which tool wrote it. Each judge marks every required fact as present, absent or contradicted, and lists any statement it believes is legally wrong. The outcome follows a fixed rule: a wrong claim beats everything; all facts present is correct; otherwise incomplete.</p></div>
+    <div class="card"><h3>Expert review</h3><p>Where a judge flagged a TXPsyBOT answer as wrong, the first author checked the claim against the law and recorded a ruling, shown on the answer. Public tools’ flags were not hand-reviewed, so the figures show raw judge verdicts for every tool.</p></div>
+  </div>
+  <p class="note">Judges agreed on the outcome for 82% of answers (Cohen’s kappa = .71) and on individual facts for 97% (kappa = .90).</p>
+  <details class="card"><summary><strong>The judges’ exact instructions</strong></summary><pre class="prompt">You are grading an answer to a question about Texas and federal special-education and school-psychology law.
+
+You receive: the QUESTION, a REFERENCE ANSWER written by subject-matter reviewers, a list of REQUIRED FACTS (each with a note on what counts), and the ANSWER to grade. You do not know who or what wrote the answer; judge only its content.
+
+For each required fact decide:
+- &quot;present&quot;: the answer states this fact, in any wording, consistent with the reference.
+- &quot;absent&quot;: the answer does not state it.
+- &quot;contradicted&quot;: the answer states something incompatible with it (e.g. a different deadline, the opposite rule).
+
+Then list WRONG CLAIMS: statements in the answer that conflict with the reference answer on a point of law, deadline, eligibility, or who-does-what. Do not list claims that are merely extra, more general, or not covered by the reference — only clear conflicts. Citation formatting, length and style are not errors.
+
+Finally classify answer_type:
+- &quot;substantive&quot;: attempts to answer the question asked.
+- &quot;refusal&quot;: declines, says it does not know, or only tells the reader to ask someone else.
+- &quot;off_topic&quot;: answers a different question than the one asked.
+
+Return ONLY a JSON object, no prose, no code fences:
+{&quot;facts&quot;: [{&quot;fact&quot;: &quot;&lt;fact text&gt;&quot;, &quot;verdict&quot;: &quot;present|absent|contradicted&quot;, &quot;rationale&quot;: &quot;&lt;one sentence&gt;&quot;}],
+ &quot;wrong_claims&quot;: [{&quot;claim&quot;: &quot;&lt;quoted or paraphrased claim&gt;&quot;, &quot;why&quot;: &quot;&lt;one sentence&gt;&quot;}],
+ &quot;answer_type&quot;: &quot;substantive|refusal|off_topic&quot;,
+ &quot;rationale&quot;: &quot;&lt;one or two sentences on the answer overall&gt;&quot;}</pre></details>
+  <div class="card"><h3>Left out, and why</h3><p>Perplexity: the free account ran a trial of its paid search, which ordinary users do not keep. A Claude collection made on the first author’s own account, where her personal preferences applied (replaced by a new free account). Two comparison-only runs (TXPsyBOT on another model, and that model with no TXPsyBOT).</p></div>
+</div>
+</main>
+<footer><div class="in"><p>Data collected and graded October 2026. NASP Practice Model Domain 10: Legal, Ethical, and Professional Practice. Research prototype; not legal advice.</p></div></footer>
+
+</body>
+</html>

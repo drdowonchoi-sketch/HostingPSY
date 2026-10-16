@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TXPsyBOT at TASP 2026</title>
+<meta name="description" content="Companion site for the TXPsyBOT poster at the TASP Fall Convention 2026: every question, every answer, and how each was graded.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%238b181a'/%3E%3Ctext x='16' y='21.5' font-family='Georgia,serif' font-size='14' font-weight='700' fill='white' text-anchor='middle'%3ETX%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Public+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="mast"><div class="in">
+  <div class="eyebrow">TASP Fall Convention 2026 · Denton, Texas · Companion site</div>
+  <h1><a href="index.html">TXPsyBOT Beta: Piloting an AI-Powered Legal and Ethical Assistant for School Psychology Practice</a></h1>
+  <p>Every question, every answer from TXPsyBOT and six free public AI tools, and exactly how each answer was graded.</p>
+</div></header>
+<nav class="topnav" aria-label="Sections"><div class="in"><a href="index.html" aria-current="page">Overview</a><a href="questions/index.html">Questions &amp; answers</a><a href="grading.html">How we graded</a><a href="sources.html">Sources</a><a href="about.html">About &amp; references</a></div></nav>
+<main>
+<div class="stack">
+  <div class="callout">
+    <p class="lead"><strong>TXPsyBOT is an AI assistant for Texas school psychologists and trainees.</strong> Ask a special-education or practice question in plain language. It answers only from a curated knowledge base of 180+ Texas and federal sources (Texas Education Code, 19 TAC, IDEA, TEA guidance, licensing rules), cites the section it relied on, and says “not covered” instead of guessing.</p>
+    <p><strong>Status:</strong> beta, under evaluation with practitioners and trainees.</p>
+  </div>
+  <div class="stats"><div class="stat"><b>100%</b><span>of TXPsyBOT’s 159 sources were Texas or federal statutes, rules, or agency documents (SAM also 100%; Google 47%, Gemini 31%).</span></div><div class="stat"><b>8 of 14</b><span>ChatGPT answers linked at least one page that no longer exists or requires a login.</span></div><div class="stat"><b>0 of 28</b><span>TXPsyBOT answers both judges called wrong (ChatGPT 0, SAM 1, Claude 5, Google 5, Gemini 7, Meta 9).</span></div><div class="stat"><b>17 of 28</b><span>TXPsyBOT answers both judges called correct.</span></div></div>
+  <div class="paper"><img src="fig1_outcomes.svg" alt="Stacked bars showing, for each system, how many answers both judges, one judge, or neither judge graded correct, incomplete, or containing a wrong claim. TXPsyBOT 2026: 0 of 28 answers called wrong by both judges."></div>
+  <div class="paper"><img src="fig2_sources.svg" alt="Stacked bars of source types per tool. All TXPsyBOT and SAM sources are Texas or federal government; Google, Gemini and Meta cite many nonprofit, commercial, law-firm, out-of-state and social-media sources."></div>
+  <div class="stack" style="gap:10px">
+    <h2>Where public AI sent readers</h2>
+    <p class="note">Round 2 answers, out of 14 per tool. An answer counts once per row even if it showed several such sources.</p>
+    <div class="tablebox"><table><thead><tr><th>Answers that…</th><th class="n">TXPsyBOT</th><th class="n">ChatGPT</th><th class="n">Gemini</th><th class="n">Google</th><th class="n">Meta</th><th class="n">SAM</th><th class="n">Claude</th></tr></thead><tbody><tr><td>Linked a page that is gone or needs a login</td><td class="n">0</td><td class="n">8</td><td class="n">0</td><td class="n">1</td><td class="n">0</td><td class="n">1</td><td class="n">0</td></tr><tr><td>Cited another state’s guidance</td><td class="n">0</td><td class="n">2</td><td class="n">2</td><td class="n">1</td><td class="n">2</td><td class="n">0</td><td class="n">0</td></tr><tr><td>Cited a law-firm or commercial site</td><td class="n">0</td><td class="n">0</td><td class="n">9</td><td class="n">7</td><td class="n">5</td><td class="n">0</td><td class="n">0</td></tr><tr><td>Cited social media or video</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">4</td><td class="n">0</td><td class="n">0</td><td class="n">0</td></tr><tr><td>Showed any source</td><td class="n">14</td><td class="n">14</td><td class="n">14</td><td class="n">13</td><td class="n">13</td><td class="n">13</td><td class="n">2</td></tr></tbody></table></div>
+  </div>
+  <p><a href="questions/index.html"><strong>Read every question and answer →</strong></a></p>
+</div>
+</main>
+<footer><div class="in"><p>Data collected and graded October 2026. NASP Practice Model Domain 10: Legal, Ethical, and Professional Practice. Research prototype; not legal advice.</p></div></footer>
+
+</body>
+</html>
